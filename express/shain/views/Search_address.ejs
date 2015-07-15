@@ -1,0 +1,78 @@
+<html>
+<head>
+	<meta charset = "UTF-8"><!-- 
+	<script type="text/javascript" src="camera.js"></script>
+	 --><link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+    
+
+
+    <title>Search</title>
+
+</head>
+<body>
+	<B><U>社員情報閲覧</U></B></br></br>
+	<form method = "post" action = "/result">
+		表示する項目
+		<div id = "hyoji">
+			<input type="checkbox" name="all" value="all">すべて</input>
+			<input type="checkbox" name="number" value="number">社員番号</input>
+			<input type="checkbox" name="name" value="name">名前</input>
+			<input type="checkbox" name="birth" value="birth">生年月日</input>
+			<input type="checkbox" name="address" value="address">住所</input>
+			<input type="checkbox" name="station" value="station">最寄駅</input></br>
+			<input type="checkbox" name="teiki" value="teiki">定期代</input>
+			<input type="checkbox" name="section" value="section">部署</input>
+			<input type="checkbox" name="position" value="position">役職</input>
+			<input type="checkbox" name="year" value="year">入社年度</input>
+			<input type="checkbox" name="photo" value="photo">写真</input>
+		</div></br>
+		検索キーワード</br>
+		<input type="search" name="keyword"></input>
+		<button>表示</button><br/><br/>
+	</form>
+	検索結果</br></br>
+
+  <form method="post" action="/delete">
+    <button class = "delete">削除</button><br/><br/>
+
+    <table>
+    <tr>
+      <!-- th -->
+      <!-- if文でだすださない -->
+      <!-- 配列であるものはだす -->
+      <td></td>
+      <td><%= number %></td>
+      <td><%= name %></td>
+      <td><%= birth %></td>
+      <td><%= address %></td>
+      <td><%= station %></td>
+      <td><%= teiki %></td>
+      <td><%= section %></td>
+      <td><%= position %></td>
+      <td><%= year %></td>
+      <td><%= photo %></td>
+    </tr>
+    <% for(var i = 0; i <  Datas.length; i++) { %>
+      <tr>
+        <!-- 大文字だとクラス名に使われるから避ける、定数はすべて大文字、予約語は使わない-->
+        <!-- foreachもある -->
+        <td><input type = "checkbox" name = "<%= Number[i] %>" value = "<%= Number[i] %>"></input></td>
+  	    <td><%= Number[i] %></td>
+        <td><%= Name[i] %></td>
+        <td><%= Birth[i] %></td>
+        <td><%= Address[i] %></td>
+        <td><%= Station[i] %></td>
+        <td><%= Teiki[i] %></td>
+        <td><%= Section[i] %></td>
+        <td><%= Position[i] %></td>
+        <td><%= Year[i] %></td>
+        <td><img alt = 'プロフィール写真' src = "<%= Photo[i] %>" width="40" height="64" />
+      </tr>
+    <% } %>
+  </table>
+
+    <button class = "delete">削除</button><br/>
+  </form>
+
+</body>
+</html>

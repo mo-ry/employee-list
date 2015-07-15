@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<script type="text/javascript" src="javascripts/camera.js"></script>
+	<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+    <title>Register</title>
+</head>
+<body>
+	<form method = "post" action="/register">
+		<B><U>社員情報登録</U></B><br/><br/>
+		<!-- 社員番号：<input type = "number"></input><br/> -->
+		<!-- スペースじゃなくてcssで見た目は整える -->
+		名前　　：<input type = "text" name = "name" required></input><br/>
+		生年月日：<input type = "text" name = "birth" required></input><br/>
+		住所　　：<input type = "text" name = "address" required></input><br/>
+		最寄駅　：<input type = "text" name = "station" required></input><br/>
+		定期代　：<input type = "number" name = "teiki" required></input><br/>
+		部署　　：<input type = "text" name = "section" required></input><br/>
+		役職　　：<input type = "text" name = "position" required></input><br/>
+		入社年度：<input type = "number" name = "year" required></input><br/>
+		写真　　：<input type = "text" id = "photo" name = "photo"></input><br/><br/>
+		<button>Register</button><br/>
+	</form>
+	<div id = "camera">
+		<button id = "ButtonforRec" class="rec">Camera</button></br>
+		<!-- <button id = "ButtonforStop" class="rec">Stop</button><br/> -->
+		<video id = "myVideo" class="video" width="200" height="320"></video><br/>
+		<button id = "ButtonforShot">Screen Shot</button></br>
+		<!-- <button id = "ButtonforClear">Clear</button><br/> -->
+		<canvas id = "myCanvas" width="200" height="320"></canvas>
+	</div>
+
+</body>
+</html>

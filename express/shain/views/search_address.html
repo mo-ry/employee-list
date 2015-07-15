@@ -1,0 +1,31 @@
+<html>
+<head>
+	<meta charset = "UTF-8"><!-- 
+	<script type="text/javascript" src="camera.js"></script>
+	 --><link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+    <title>Search</title>
+</head>
+<body>
+	<B><U>社員情報閲覧</U></B></br></br>
+	<form method = "post" action = "/result">
+		表示する項目
+		<div id = "hyoji">
+			<input type = "checkbox" name = "all" value = "all">すべて</input>
+			<input type = "checkbox" name = "number" value = "number">社員番号</input>
+			<input type = "checkbox" name = "name" value = "name">名前</input>
+			<input type = "checkbox" name = "birth" value = "birth">生年月日</input>
+			<input type = "checkbox" name = "address" value = "address">住所</input>
+			<input type = "checkbox" name = "station" value = "station">最寄駅</input></br>
+			<input type = "checkbox" name = "teiki" value = "teiki">定期代</input>
+			<input type = "checkbox" name = "section" value = "section">部署</input>
+			<input type = "checkbox" name = "position" value = "position">役職</input>
+			<input type = "checkbox" name = "year" value = "year">入社年度</input>
+			<input type = "checkbox" name = "photo" value = "photo">写真</input>
+		</div></br>
+		検索キーワード</br>
+		<input type = "search" name = "keyword"></input>
+		<button>表示</button><br/><br/>
+	</form>
+	検索結果</br>
+</body>
+</html>

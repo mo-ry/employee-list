@@ -1,0 +1,16 @@
+#camera{
+	position: absolute;
+	left: 280px;
+	top: 10px;
+}
+
+#touroku{
+	position: static;
+}
+
+#hyoji{
+	border-style: solid;
+	border-width: 2px;
+	border-color: lightgray;
+	border-radius: 10px;
+}
